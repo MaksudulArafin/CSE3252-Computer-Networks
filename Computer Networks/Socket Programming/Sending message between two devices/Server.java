@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.*;
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Server {
     public static void main(String[] args) {
@@ -22,13 +23,24 @@ public class Server {
                 try {
                     while ((msg = in.readLine()) != null) {
                         if (msg.equalsIgnoreCase("exit")) {
-                            System.out.println("Client left the chat.");
+                            System.out.println("Client left the chat. Goodbye!");
                             socket.close();
                             serverSocket.close();
                             
                             System.exit(0);
                             break;
                         }
+                        else if (msg.equalsIgnoreCase("Hi")) {
+                            out.println("Hello");
+                        } else if (msg.equalsIgnoreCase("Date")) {
+                            String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+                            out.println("Server Date: " + date);
+                        } else if (msg.equalsIgnoreCase("Time")) {
+                            String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+                            out.println("Server Time: " + time);
+                        } else if (msg.equalsIgnoreCase("IP")) {
+                            out.println("Server IP: " + InetAddress.getLocalHost().getHostAddress());
+                        } 
                         System.out.println("Client: " + msg);
                     }
                 } catch (IOException e) {
