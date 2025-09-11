@@ -1,3 +1,8 @@
+clc;             % clear command window
+clear;           % clear all variables
+close all;       % close all figure
+
+
 % Define the range of n
 n = -5:5;          % from -5 to 5 (you can adjust)
 

@@ -1,3 +1,7 @@
+clc;             % clear command window
+clear;           % clear all variables
+close all;       % close all figure
+
 % Time specifications
 Fs = 2000;              % Sampling frequency (at least 2x100 = 200 Hz, but choose higher for smoothness)
 T = 1/Fs;               % Sampling period
@@ -9,7 +13,7 @@ x = 5*cos(2*pi*100*t);
 
 % Plot
 figure;
-plot(t, x, 'b', 'LineWidth', 1.5);  %plot(x, y, 'b', 'LineWidth', 1.5, 'Marker', 'o')
+plot(t, x, 'b', 'LineWidth', 2.5);  %plot(x, y, 'b', 'LineWidth', 1.5, 'Marker', 'o')
 xlabel('Time (seconds)');
 ylabel('Amplitude');
 title('x(t) = 5cos(2π100t)');
