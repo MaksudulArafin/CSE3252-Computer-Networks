@@ -1,3 +1,5 @@
+	%%Find DFT of the following:   x(t)=3cos2000πt+5sin6000πt
+
 clc;             % clear command window
 clear;           % clear all variables
 close all;       % close all figures

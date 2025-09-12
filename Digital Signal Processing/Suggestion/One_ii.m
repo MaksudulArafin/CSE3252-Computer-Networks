@@ -1,3 +1,5 @@
+%%	x(n)= δ(n-2)
+
 clc;             % clear command window
 clear;           % clear all variables
 close all;       % close all figure

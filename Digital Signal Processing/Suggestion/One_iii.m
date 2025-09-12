@@ -1,3 +1,5 @@
+%%	x(n)=u(n+5)
+
 clc;             % clear command window
 clear;           % clear all variables
 close all;       % close all figures

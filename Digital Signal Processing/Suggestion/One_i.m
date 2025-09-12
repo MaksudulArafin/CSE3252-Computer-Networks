@@ -1,3 +1,6 @@
+%%	x(t)=5cos2π100t
+
+
 clc;             % clear command window
 clear;           % clear all variables
 close all;       % close all figure
